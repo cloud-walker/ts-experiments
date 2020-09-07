@@ -1,1 +1,3 @@
-export const sum = (a: number, b: number) => a + b
+import {add} from './add'
+
+export const sum = (nums: Array<number>) => nums.reduce(add)
