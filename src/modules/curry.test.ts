@@ -1,7 +1,7 @@
-import {add} from './add'
 import {curry} from './curry'
 
 test('should work properly', () => {
+  const add = (a: number, b: number) => a + b
   const cAdd = curry(add)
 
   expect(cAdd.name).toBe('curry(add)')
