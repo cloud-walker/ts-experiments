@@ -9,4 +9,8 @@ test('works properly', () => {
     const pipeFunc = pipe(upper, exclaim, doubleSay)
     expect(pipeFunc('hi')).toBe('HI!HI!')
   }
+
+  {
+    expect(pipe('hi', upper, exclaim, doubleSay)).toBe('HI!HI!')
+  }
 })
