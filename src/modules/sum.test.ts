@@ -10,8 +10,4 @@ test('should work properly', () => {
 
   expect(sum([3, 5])).toBe(8)
   expect(sum([5, 3])).toBe(8)
-
-  expect(sum.name).toBe('sum')
-
-  expect(sum(1, 2, 3)).toBe(6)
 })

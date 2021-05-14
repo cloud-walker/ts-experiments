@@ -10,8 +10,4 @@ test('should work properly', () => {
 
   expect(add(3, 5)).toBe(8)
   expect(add(5, 3)).toBe(8)
-
-  expect(add(5)(3)).toBe(8)
-
-  expect(add.name).toBe('add')
 })
