@@ -30,13 +30,3 @@ export function pick(names: ReadonlyArray<unknown>, obj?: UObject) {
 
   return obj == null ? picker : picker(obj)
 }
-
-const subject = {foo: 1, bar: 2, baz: 3} as const
-
-const a = pick(['zzz'], {foo: 1, bar: 2, baz: 3})
-
-const fooPicker = pick(['foo'])
-
-const b = fooPicker(subject)
-
-type Foo = Pick<typeof subject, 'foo'>
