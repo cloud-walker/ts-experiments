@@ -7,15 +7,21 @@ export function filter<A, B>(
   predicate: Predicate<A>,
   arr: ReadonlyArray<B>,
 ): Array<B>
-export function filter(
-  predicate: Predicate<unknown>,
-  arr?: ReadonlyArray<unknown>,
+export function filter<Value>(
+  predicate: Predicate<Value>,
+  arr?: ReadonlyArray<Value>,
 ) {
-  const filterable = (arr: ReadonlyArray<unknown>) => arr.filter(predicate)
+  const _filter = (arr: ReadonlyArray<Value>) => {
+    let result = []
 
-  if (arr == null) {
-    return filterable
+    for (const value of arr) {
+      if (predicate(value)) {
+        result.push(value)
+      }
+    }
+
+    return result
   }
 
-  return filterable(arr)
+  return arr != null ? _filter(arr) : _filter
 }

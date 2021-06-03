@@ -9,15 +9,11 @@ export function reject<A, B>(
 export function reject<A>(
   predicate: Predicate<A>,
 ): <B>(arr: ReadonlyArray<B>) => Array<B>
-export function reject(
-  predicate: Predicate<unknown>,
-  arr?: ReadonlyArray<unknown>,
+export function reject<Value>(
+  predicate: Predicate<Value>,
+  arr?: ReadonlyArray<Value>,
 ) {
-  const rejectable = filter(complement(predicate))
+  const _reject = filter(complement(predicate))
 
-  if (arr == null) {
-    return rejectable
-  }
-
-  return rejectable(arr)
+  return arr != null ? _reject(arr) : _reject
 }
