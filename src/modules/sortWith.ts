@@ -1,4 +1,4 @@
-type Comparator<T> = (a: T, b: T) => 1 | -1 | 0
+import {Comparator} from './types/Comparator'
 
 export function sortWith<T>(
   comparators: readonly Comparator<T>[],
