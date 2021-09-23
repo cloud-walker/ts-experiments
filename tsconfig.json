@@ -3,6 +3,7 @@
     "noEmit": true,
     "strict": true,
     "noUncheckedIndexedAccess": true,
+    "moduleResolution": "node",
     "target": "esnext"
   }
 }
