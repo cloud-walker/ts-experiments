@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "lint": "tsc --noEmit",
     "test": "jest --watch",
     "coverage": "jest --coverage",
     "test:profiling": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
