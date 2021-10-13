@@ -1,5 +1,3 @@
-export function identity<A>(value: A): A
-
-export function identity(value: any) {
+export function identity<A>(value: A) {
   return value
 }
