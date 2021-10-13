@@ -1,4 +1,3 @@
-import { add } from './add'
 import { chain } from './chain'
 
 const double = (n: number) => n + n
