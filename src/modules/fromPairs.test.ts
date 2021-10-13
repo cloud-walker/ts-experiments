@@ -15,7 +15,7 @@ test('works properly from simple array of pairs', () => {
 })
 
 test('works properly from complex array of pairs', () => {
-  const value = [
+  const value: [string | number, any][] = [
     ['key1', 'value1'],
     [200, 123456],
     ['abc123', { a: 1, b: 2, c: 3 }],

@@ -1,5 +1,3 @@
-export function fromPairs<A extends string | number, B>(
-  pairs: Array<[A, B]>
-): Record<string, B> {
+export function fromPairs(pairs: [string | number, any][]) {
   return Object.fromEntries(pairs)
 }
