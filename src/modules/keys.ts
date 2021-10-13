@@ -1,3 +1,1 @@
-export function keys(value: Record<string, unknown>) {
-  return Object.keys(value)
-}
+export const keys = (value: Record<string, unknown>) => Object.keys(value)
